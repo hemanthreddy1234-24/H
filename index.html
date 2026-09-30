@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Function Hall Booking</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">Function<span>Hall</span></div>
+  <nav>
+    <a href="#home">Home</a><a href="#halls">Halls</a><a href="#booking">Booking</a><a href="#payments">Payment</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">EVENT VENUE BOOKING</p>
+    <h1>Book your perfect function hall.</h1>
+    <p>Check hall availability, add chairs and decorations, calculate the total, and complete a demo payment.</p>
+    <a class="btn" href="#booking">Start Booking</a>
+  </div>
+</section>
+
+<section id="halls" class="section">
+  <h2>Available Function Halls</h2>
+  <div id="hallCards" class="cards"></div>
+</section>
+
+<section id="booking" class="section booking-section">
+  <h2>Create Your Booking</h2>
+  <form id="bookingForm">
+    <div class="grid">
+      <label>Function Hall
+        <select id="hall" required></select>
+      </label>
+      <label>Booking Date
+        <input type="date" id="date" required>
+      </label>
+      <label>Event Type
+        <select id="eventType" required>
+          <option value="">Select event</option><option>Wedding</option><option>Birthday</option>
+          <option>Engagement</option><option>Reception</option><option>Conference</option>
+        </select>
+      </label>
+      <label>Guest Count
+        <input type="number" id="guests" min="1" value="100" required>
+      </label>
+      <label>Chairs
+        <input type="number" id="chairs" min="0" value="100">
+      </label>
+      <label>Decoration Package
+        <select id="decoration">
+          <option value="0">No decoration — ₹0</option>
+          <option value="5000">Basic — ₹5,000</option>
+          <option value="10000">Premium — ₹10,000</option>
+          <option value="18000">Luxury — ₹18,000</option>
+        </select>
+      </label>
+    </div>
+    <div class="summary">
+      <h3>Booking Summary</h3>
+      <p>Hall: <b id="sumHall">-</b></p>
+      <p>Hall charge: <b id="hallPrice">₹0</b></p>
+      <p>Chair charge: <b id="chairPrice">₹0</b></p>
+      <p>Decoration: <b id="decPrice">₹0</b></p>
+      <hr><p class="total">Total: <span id="total">₹0</span></p>
+    </div>
+    <button class="btn" type="submit">Continue to Payment</button>
+  </form>
+</section>
+
+<section id="payments" class="section">
+  <h2>Payment</h2>
+  <div id="paymentBox" class="payment-box">
+    <p>Complete the booking details first. Payment options will appear here.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>My Booking</h2>
+  <div id="bookingResult" class="result">No booking completed yet.</div>
+</section>
+
+<footer>© 2026 FunctionHall Booking • Demo application</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
